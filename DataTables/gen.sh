@@ -1,0 +1,13 @@
+#!/bin/bash
+
+WORKSPACE=..
+LUBAN_DLL=$WORKSPACE/Tools/Luban/Luban.dll
+CONF_ROOT=.
+
+dotnet $LUBAN_DLL \
+    -t all \
+    -c cs-simple-json \
+    -d json \
+    --conf $CONF_ROOT/luban.conf \
+    -x outputCodeDir=$WORKSPACE/Assets/_Code/Gen \
+    -x outputDataDir=$WORKSPACE/Assets/StreamingAssets/Tables

@@ -1,0 +1,21 @@
+<module name="Audio">
+    <!-- 音频 ID：Key 作枚举名、数值作枚举值。名字前缀决定类别与资源子目录：
+         BGM_ / SFX_ / Ambient_ / Voice_。约定 1xxx=BGM，2xxx=SFX。 -->
+    <enum name="AudioId">
+        <var name="None" value="0"/>
+        <var name="BGM_MainMenu" value="1001"/>
+        <var name="BGM_Forest" value="1002"/>
+        <var name="SFX_Click" value="2001"/>
+        <var name="SFX_OpenDoor" value="2002"/>
+    </enum>
+
+    <!-- 音频条目：资源地址按约定 Audio/{前缀}/{asset} 推导（见 AudioManager.Address）。 -->
+    <bean name="AudioEntry">
+        <var name="id" type="AudioId"/>
+        <var name="asset" type="string"/>
+        <var name="volume" type="float"/>
+        <var name="loop" type="bool"/>
+    </bean>
+
+    <table name="TbAudio" value="AudioEntry" input="Audio.xlsx" mode="map" index="id"/>
+</module>

@@ -1,0 +1,139 @@
+# EditorConfig — Awen 项目 C# 代码规范（Google C# Style Guide）
+# 文档：https://google.github.io/styleguide/csharp-style.html
+# 此文件由 IDE / 格式化器（Rider、VS、`dotnet format`）读取并自动套用。
+# 规范说明见 CLAUDE.md「C# 代码规范」一节。
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+[*.{csproj,asmdef,asmref,json,xml}]
+indent_size = 2
+charset = utf-8-bom
+
+[*.cs]
+indent_style = space
+indent_size = 2
+max_line_length = 100
+
+# ── using 指令 ────────────────────────────────────────────────
+# System.* 排最前，其余按字母序；using 放在 namespace 外。
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
+csharp_using_directive_placement = outside_namespace:warning
+
+# ── 大括号 / 换行（K&R，同行大括号） ─────────────────────────
+csharp_new_line_before_open_brace = none
+csharp_new_line_before_else = false
+csharp_new_line_before_catch = false
+csharp_new_line_before_finally = false
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_anonymous_types = true
+csharp_new_line_between_query_expression_clauses = true
+
+# ── 缩进 ──────────────────────────────────────────────────────
+csharp_indent_case_contents = true
+csharp_indent_case_contents_when_block = false
+csharp_indent_switch_labels = true
+csharp_indent_labels = one_less_than_current
+
+# ── 空格 ──────────────────────────────────────────────────────
+csharp_space_after_keywords_in_control_flow_statements = true
+csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_after_cast = false
+csharp_space_around_binary_operators = before_and_after
+csharp_space_between_method_call_empty_parameter_list_parentheses = false
+
+# ── 换行偏好 ──────────────────────────────────────────────────
+csharp_preserve_single_line_statements = true
+csharp_preserve_single_line_blocks = true
+
+# ── var 用法（类型明显时用 var；内置基础类型用显式类型） ──────
+csharp_style_var_for_built_in_types = false:suggestion
+csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_style_var_elsewhere = false:suggestion
+
+# ── 表达式体成员（只读单行属性用 =>；方法不用） ───────────────
+csharp_style_expression_bodied_methods = false:suggestion
+csharp_style_expression_bodied_properties = true:suggestion
+csharp_style_expression_bodied_accessors = true:suggestion
+csharp_style_expression_bodied_constructors = false:suggestion
+
+# ── 委托调用：SomeDelegate?.Invoke() ─────────────────────────
+csharp_style_conditional_delegate_call = true:suggestion
+
+# ── 修饰符顺序 ────────────────────────────────────────────────
+csharp_preferred_modifier_order = public,protected,internal,private,new,abstract,virtual,override,sealed,static,readonly,extern,unsafe,volatile,async:warning
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:warning
+
+# ── const / readonly 偏好 ─────────────────────────────────────
+dotnet_style_readonly_field = true:suggestion
+
+# ╔══════════════════════════════════════════════════════════════╗
+# ║ 命名规范                                                       ║
+# ║ 仅 public 成员用 PascalCase；private/protected/internal 字段   ║
+# ║ 用 _camelCase（const/static/readonly 不改变此规则）。          ║
+# ╚══════════════════════════════════════════════════════════════╝
+
+# —— 符号组 ——
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
+dotnet_naming_symbols.interfaces.applicable_accessibilities = *
+
+dotnet_naming_symbols.types.applicable_kinds = class,struct,enum,delegate
+dotnet_naming_symbols.types.applicable_accessibilities = *
+
+dotnet_naming_symbols.public_members.applicable_kinds = property,method,field,event
+dotnet_naming_symbols.public_members.applicable_accessibilities = public
+
+dotnet_naming_symbols.non_public_fields.applicable_kinds = field
+dotnet_naming_symbols.non_public_fields.applicable_accessibilities = private,protected,internal,protected_internal,private_protected
+
+dotnet_naming_symbols.locals_params.applicable_kinds = parameter,local
+
+# —— 命名风格 ——
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+dotnet_naming_style.i_pascal_case.capitalization = pascal_case
+dotnet_naming_style.i_pascal_case.required_prefix = I
+
+dotnet_naming_style.camel_case.capitalization = camel_case
+
+dotnet_naming_style.underscore_camel_case.capitalization = camel_case
+dotnet_naming_style.underscore_camel_case.required_prefix = _
+
+# —— 规则 ——
+dotnet_naming_rule.interfaces_are_i_pascal.severity = warning
+dotnet_naming_rule.interfaces_are_i_pascal.symbols = interfaces
+dotnet_naming_rule.interfaces_are_i_pascal.style = i_pascal_case
+
+dotnet_naming_rule.types_are_pascal.severity = warning
+dotnet_naming_rule.types_are_pascal.symbols = types
+dotnet_naming_rule.types_are_pascal.style = pascal_case
+
+dotnet_naming_rule.public_members_are_pascal.severity = warning
+dotnet_naming_rule.public_members_are_pascal.symbols = public_members
+dotnet_naming_rule.public_members_are_pascal.style = pascal_case
+
+dotnet_naming_rule.non_public_fields_are_underscore_camel.severity = warning
+dotnet_naming_rule.non_public_fields_are_underscore_camel.symbols = non_public_fields
+dotnet_naming_rule.non_public_fields_are_underscore_camel.style = underscore_camel_case
+
+dotnet_naming_rule.locals_params_are_camel.severity = suggestion
+dotnet_naming_rule.locals_params_are_camel.symbols = locals_params
+dotnet_naming_rule.locals_params_are_camel.style = camel_case
+
+# ── 生成代码豁免：Luban (Gen/) 与 ResAddress 不受规范约束 ──────
+[Assets/_Code/Gen/**.cs]
+generated_code = true
+dotnet_analyzer_diagnostic.severity = none
+
+[Assets/_Code/Core/Resource/ResAddress.cs]
+generated_code = true
+dotnet_analyzer_diagnostic.severity = none

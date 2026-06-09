@@ -1,0 +1,56 @@
+[
+  {
+    "id": "UI_START",
+    "ZhCN": "开始游戏",
+    "EnUS": "Start Game",
+    "JaJP": "ゲーム開始"
+  },
+  {
+    "id": "UI_EXIT",
+    "ZhCN": "退出游戏",
+    "EnUS": "Exit Game",
+    "JaJP": "ゲーム終了"
+  },
+  {
+    "id": "LORE_001",
+    "ZhCN": "这座石碑已经风化",
+    "EnUS": "The stone monument has weathered away",
+    "JaJP": "この石碑はもう風化している"
+  },
+  {
+    "id": "UI_SETTINGS",
+    "ZhCN": "设置",
+    "EnUS": "Settings",
+    "JaJP": "設定"
+  },
+  {
+    "id": "UI_BACK",
+    "ZhCN": "返回",
+    "EnUS": "Back",
+    "JaJP": "戻る"
+  },
+  {
+    "id": "UI_VOL_MASTER",
+    "ZhCN": "整体",
+    "EnUS": "Master",
+    "JaJP": "全体"
+  },
+  {
+    "id": "UI_VOL_MUSIC",
+    "ZhCN": "背景/环境",
+    "EnUS": "Music",
+    "JaJP": "音楽"
+  },
+  {
+    "id": "UI_VOL_SFX",
+    "ZhCN": "音效",
+    "EnUS": "SFX",
+    "JaJP": "効果音"
+  },
+  {
+    "id": "UI_VOL_VOICE",
+    "ZhCN": "语音",
+    "EnUS": "Voice",
+    "JaJP": "ボイス"
+  }
+]

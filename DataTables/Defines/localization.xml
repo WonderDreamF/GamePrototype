@@ -1,0 +1,9 @@
+<module name="Localization">
+    <bean name="LocaleEntry">
+        <var name="id" type="string"/>
+        <var name="ZhCN" type="string"/>
+        <var name="EnUS" type="string"/>
+        <var name="JaJP" type="string"/>
+    </bean>
+    <table name="TbLocalization" value="LocaleEntry" input="Localization.xlsx" mode="map" index="id"/>
+</module>

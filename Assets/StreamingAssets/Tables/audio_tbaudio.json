@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1001,
+    "asset": "MainMenuBGM",
+    "volume": 1,
+    "loop": true
+  },
+  {
+    "id": 1002,
+    "asset": "ForestBGM",
+    "volume": 0.8,
+    "loop": true
+  },
+  {
+    "id": 2001,
+    "asset": "Click",
+    "volume": 1,
+    "loop": false
+  }
+]
