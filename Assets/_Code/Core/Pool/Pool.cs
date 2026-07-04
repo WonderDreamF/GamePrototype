@@ -1,7 +1,7 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Awen.Core {
+namespace GamePrototype.Core {
   /// <summary>
   /// 单个预制体对应的对象池（即层级里的一个「类别」容器）。
   /// 维护一个非激活实例栈和一个激活实例集合，所有实例都挂在自己的容器 Transform 下，

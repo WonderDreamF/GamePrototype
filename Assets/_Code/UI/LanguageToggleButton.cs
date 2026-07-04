@@ -1,11 +1,11 @@
-using Awen.Core;
+﻿using GamePrototype.Core;
 using cfg.Localization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace Awen.UI {
+namespace GamePrototype.UI {
   /// <summary>
   /// 语言切换按钮：点击在「中文 / English」之间切换（调用 <see cref="LocalizationManager.SetLanguage"/>）。
   /// 按钮文案显示当前语言，并随语言变化（含外部触发）自动刷新。

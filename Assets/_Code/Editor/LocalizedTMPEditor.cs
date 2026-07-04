@@ -1,11 +1,11 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using Awen.UI;
+using GamePrototype.UI;
 using Luban.SimpleJSON;
 using UnityEditor;
 using UnityEngine;
 
-namespace Awen.Editor {
+namespace GamePrototype.Editor {
   [CustomEditor(typeof(LocalizedTMP))]
   public class LocalizedTMPEditor : UnityEditor.Editor {
     static readonly string _dataPath = Path.Combine(

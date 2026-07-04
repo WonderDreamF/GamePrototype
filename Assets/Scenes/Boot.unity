@@ -206,7 +206,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae0be88d81e3b274190fbb13986545e5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Awen.SaveSystem::SaveManager
+  m_EditorClassIdentifier: GamePrototype.SaveSystem::SaveManager
 --- !u!1 &542060575
 GameObject:
   m_ObjectHideFlags: 0

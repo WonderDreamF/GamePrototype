@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace Awen.SaveSystem {
+namespace GamePrototype.SaveSystem {
   [Serializable]
   public class SaveData {
     public int Version = 1;
@@ -29,7 +29,7 @@ namespace Awen.SaveSystem {
   public class PlayerData {
     public float PosX;
     public float PosY;
-    public string CurrentForm;  // Awen的当前神性形态
+    public string CurrentForm;  // 当前形态
   }
 
   [Serializable]

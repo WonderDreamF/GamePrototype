@@ -9,7 +9,7 @@ GameRes —— YooAsset 收集根目录
 例：Assets/GameRes/Art/UI/Icons/heart.png  ->  地址 "Art/UI/Icons/heart"
 
 地址不要手打，用生成的强类型常量 ResAddress.Xxx（资源增删改时自动重生成，
-也可手动跑菜单 Tools/Awen/生成资源地址常量）。
+也可手动跑菜单 Tools/GamePrototype/生成资源地址常量）。
 
 收集器包名：DefaultPackage（与 ResourceManager.PackageName 一致）。
 

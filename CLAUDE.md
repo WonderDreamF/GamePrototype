@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Awen is a Unity 6 narrative indie game (version 6000.3.10f1) targeting Steam PC, integrated with **MCPForUnity** — a Model Context Protocol implementation enabling AI assistants to interact with the Unity Editor programmatically. It uses Universal Render Pipeline (URP 17.3.0).
+GamePrototype is a Unity 6 game project template (version 6000.3.10f1) targeting Steam PC, integrated with **MCPForUnity** — a Model Context Protocol implementation enabling AI assistants to interact with the Unity Editor programmatically. It uses Universal Render Pipeline (URP 17.3.0).
 
 ## Project Structure
 
@@ -47,7 +47,7 @@ Assets/
 │   ├── Characters/               # 角色数据 / 控制逻辑
 │   ├── UI/                       # UIManager, DialogueUI, MainMenuUI
 │   ├── Audio/                    # AudioManager, BGMController, SFXController
-│   ├── SaveSystem/               # SaveManager, SaveData（独立程序集 Awen.SaveSystem）
+│   ├── SaveSystem/               # SaveManager, SaveData（独立程序集 GamePrototype.SaveSystem）
 │   ├── Utilities/                # 扩展方法, 常量, 静态工具
 │   ├── Gen/                      # Luban 生成的配置代码（勿手改）
 │   └── Editor/                   # 编辑器扩展脚本
@@ -89,18 +89,18 @@ Unity projects are built and tested through the Unity Editor or command line:
 
 **Open project:**
 ```
-Unity -projectPath C:\Project\Awen
+Unity -projectPath C:\Project\GamePrototype
 ```
 
 **Run tests (command line):**
 ```
-Unity -projectPath C:\Project\Awen -runTests -testPlatform editmode -quit -batchmode
-Unity -projectPath C:\Project\Awen -runTests -testPlatform playmode -quit -batchmode
+Unity -projectPath C:\Project\GamePrototype -runTests -testPlatform editmode -quit -batchmode
+Unity -projectPath C:\Project\GamePrototype -runTests -testPlatform playmode -quit -batchmode
 ```
 
 **Build (standalone):**
 ```
-Unity -projectPath C:\Project\Awen -buildTarget StandaloneWindows64 -executeMethod BuildPipeline.BuildPlayer -quit -batchmode
+Unity -projectPath C:\Project\GamePrototype -buildTarget StandaloneWindows64 -executeMethod BuildPipeline.BuildPlayer -quit -batchmode
 ```
 
 In-editor: use **Window > General > Test Runner** for tests, **File > Build Settings** for builds.
@@ -158,7 +158,7 @@ Unity's new Input System (1.18.0) is used. Input actions are defined in `Assets/
 ### 1.5 资源通过 YooAsset 按地址加载，不拖 Inspector
 
 - 预制体、Sprite、AudioClip、ScriptableObject 等资源，一律通过 `ResourceManager` 按「地址」加载，**不再往 Inspector 拖引用**：`await ResourceManager.Instance.LoadAsync<T>(ResAddress.Xxx)`。
-- 地址**不要手打字符串**，用生成的强类型常量 `ResAddress.UI_Icons_heart`（值为 `"UI/Icons/heart"`）。常量由 `ResAddressGenerator` 扫描 `GameRes` 自动生成到 `_Code/Core/Resource/ResAddress.cs`：资源增删改时自动重生成，也可手动跑菜单 `Tools/Awen/生成资源地址常量`。该文件是自动生成的，**勿手改**。
+- 地址**不要手打字符串**，用生成的强类型常量 `ResAddress.UI_Icons_heart`（值为 `"UI/Icons/heart"`）。常量由 `ResAddressGenerator` 扫描 `GameRes` 自动生成到 `_Code/Core/Resource/ResAddress.cs`：资源增删改时自动重生成，也可手动跑菜单 `Tools/GamePrototype/生成资源地址常量`。该文件是自动生成的，**勿手改**。
 - `ResourceManager` 加载一次即缓存句柄（常驻、不重复加载、不被自动卸载），所以「读取到一遍就保存在脚本里」是默认行为，调用方无需持有引用、无需手动释放。
 - 频繁生成的对象：`await ResourceManager.Instance.InstantiateAsync(location, pos, rot)` —— 资源由 `ResourceManager` 缓存，实例由 `PoolManager` 复用。
 
@@ -226,7 +226,7 @@ Unity's new Input System (1.18.0) is used. Input actions are defined in `Assets/
 
 ### 命名空间（Namespaces）
 
-- 手写代码按目录归入 `Awen.*` 命名空间，**最多 2 级**：`Awen.Core`（含 Core 下所有子目录 Pool/Events/Resource）、`Awen.Audio`、`Awen.UI`、`Awen.Editor`；存档系统沿用程序集名 `Awen.SaveSystem`。
+- 手写代码按目录归入 `GamePrototype.*` 命名空间，**最多 2 级**：`GamePrototype.Core`（含 Core 下所有子目录 Pool/Events/Resource）、`GamePrototype.Audio`、`GamePrototype.UI`、`GamePrototype.Editor`；存档系统沿用程序集名 `GamePrototype.SaveSystem`。
 - `using` 放在 `namespace` **外**。
 - 生成文件（`ResAddress`、Luban `cfg.*`）保持其原命名空间（`ResAddress` 在全局命名空间，任何命名空间内都可直接访问，无需 `using`）。
 - 经反射按**短类型名**发现的类型（如 YooAsset 的 `IAddressRule` 实现 `AddressByGameResPath`）可安全加命名空间——YooAsset 用 `type.Name` 匹配，与命名空间无关。

@@ -1,6 +1,6 @@
-using YooAsset.Editor;
+﻿using YooAsset.Editor;
 
-namespace Awen.Editor {
+namespace GamePrototype.Editor {
   /// <summary>
   /// YooAsset 自定义寻址规则：地址 = 资源相对收集根目录（GameRes）的路径，去掉扩展名。
   /// 例：Assets/GameRes/UI/Icons/heart.png  ->  地址 "UI/Icons/heart"

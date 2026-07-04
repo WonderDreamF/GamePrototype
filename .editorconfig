@@ -1,4 +1,4 @@
-# EditorConfig — Awen 项目 C# 代码规范（Google C# Style Guide）
+# EditorConfig — GamePrototype 项目 C# 代码规范（Google C# Style Guide）
 # 文档：https://google.github.io/styleguide/csharp-style.html
 # 此文件由 IDE / 格式化器（Rider、VS、`dotnet format`）读取并自动套用。
 # 规范说明见 CLAUDE.md「C# 代码规范」一节。

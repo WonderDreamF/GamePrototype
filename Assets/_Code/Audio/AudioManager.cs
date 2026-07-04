@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 using System.Threading;
-using Awen.Core;
+using GamePrototype.Core;
 using cfg.Audio;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Awen.Audio {
+namespace GamePrototype.Audio {
   /// <summary>音量通道，对应 AudioMixer 的暴露参数（&lt;Channel&gt;Volume）与混音组。</summary>
   public enum AudioChannel { Master, Music, SFX, Voice }
 

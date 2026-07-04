@@ -1,10 +1,10 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using YooAsset;
 using Object = UnityEngine.Object;
 
-namespace Awen.Core {
+namespace GamePrototype.Core {
   /// <summary>
   /// 资源管理器：项目所有资源（预制体、Sprite、AudioClip、ScriptableObject…）统一通过
   /// YooAsset 按「地址（location）」加载，<b>不再往 Inspector 拖拽引用</b>。

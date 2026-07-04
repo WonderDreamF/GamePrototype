@@ -1,10 +1,10 @@
-using System;
-using Awen.Core;
+﻿using System;
+using GamePrototype.Core;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Awen.Audio {
+namespace GamePrototype.Audio {
   /// <summary>
   /// 挂在「音效预制体」上：自带一个 AudioSource。由 <see cref="AudioManager"/> 从对象池取出后，
   /// 调 <see cref="PlayClip"/> 播放，播放时长结束后自动归还对象池。

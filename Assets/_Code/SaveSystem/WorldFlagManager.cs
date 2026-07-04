@@ -1,7 +1,7 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace Awen.SaveSystem {
+namespace GamePrototype.SaveSystem {
   /// <summary>
   /// 运行时 Flag 访问层。读写都经过这里，Save 时由 SaveManager 统一序列化。
   /// </summary>

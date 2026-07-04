@@ -1,7 +1,7 @@
-using cfg.Localization;
+﻿using cfg.Localization;
 using UnityEngine;
 
-namespace Awen.Core {
+namespace GamePrototype.Core {
   public static class LocalizationManager {
     private const string _prefsKey = "Language";
 

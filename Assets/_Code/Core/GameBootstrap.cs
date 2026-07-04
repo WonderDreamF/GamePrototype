@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Awen.Core {
+namespace GamePrototype.Core {
   /// <summary>
   /// 游戏启动流程。挂在 Boot 场景里 —— Boot 是常驻场景（持有各管理器、相机、EventSystem），
   /// 后续场景以 Additive 方式加载在其之上，Boot 不卸载。

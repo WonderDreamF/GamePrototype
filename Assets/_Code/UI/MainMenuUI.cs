@@ -1,8 +1,8 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace Awen.UI {
+namespace GamePrototype.UI {
   /// <summary>
   /// 主菜单逻辑。按钮引用通过 Inspector 绑定（同场景内组件引用，零运行时查找）。
   /// </summary>

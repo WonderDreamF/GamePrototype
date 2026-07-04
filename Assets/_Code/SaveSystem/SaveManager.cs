@@ -1,13 +1,13 @@
-using System;
+﻿using System;
 using System.IO;
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace Awen.SaveSystem {
+namespace GamePrototype.SaveSystem {
   /// <summary>
   /// 存档管理器。支持 3 个存档槽位 + 自动存档。
   /// 放在常驻场景里，不使用 DontDestroyOnLoad。
-  /// 注意：本系统在独立程序集 Awen.SaveSystem 中（便于单元测试），无法引用位于
+  /// 注意：本系统在独立程序集 GamePrototype.SaveSystem 中（便于单元测试），无法引用位于
   /// Assembly-CSharp 的 <c>MonoSingleton</c>，因此这里保留自包含的单例实现。
   /// 用 OnSaveCompleted / OnSaveLoaded 事件对接外部系统（如 EventBus）。
   /// </summary>

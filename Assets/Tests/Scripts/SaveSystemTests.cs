@@ -1,10 +1,10 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using UnityEngine;
 
-namespace Awen.SaveSystem {
+namespace GamePrototype.SaveSystem {
   /// <summary>
   /// EditMode 测试：存档系统核心逻辑。
   /// 在 Window > General > Test Runner > EditMode 中运行。

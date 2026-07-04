@@ -1,13 +1,14 @@
-# Awen
+# GamePrototype
 
-> 一款基于 **Unity 6** 的叙事独立游戏,面向 Steam PC 平台。
+> Unity 6 游戏项目模板 —— 面向 Steam PC 平台。
 
 ![Unity](https://img.shields.io/badge/Unity-6000.3.10f1-000000?logo=unity)
 ![Render Pipeline](https://img.shields.io/badge/URP-17.3.0-blue)
 ![Platform](https://img.shields.io/badge/platform-Windows%20(Steam)-lightgrey)
 ![Code Style](https://img.shields.io/badge/code%20style-Google%20C%23-4285F4)
+![Template](https://img.shields.io/badge/template-ready-brightgreen)
 
-Awen 是一款以叙事为核心的独立游戏。工程在框架层做了完整的基础设施搭建——资源热加载、对象池、事件总线、配置表、本地化、音频、存档——并深度集成 **MCP for Unity**,支持通过 AI 助手(如 Claude Code)直接操作 Unity 编辑器。
+基于 **Unity 6** 的游戏项目模板，在框架层做了完整的基础设施搭建——资源热加载、对象池、事件总线、配置表、本地化、音频、存档——并深度集成 **MCP for Unity**,支持通过 AI 助手(如 Claude Code)直接操作 Unity 编辑器。
 
 ---
 
@@ -30,6 +31,10 @@ Awen 是一款以叙事为核心的独立游戏。工程在框架层做了完整
 
 ## 🚀 快速开始
 
+### 使用模板
+
+点击 GitHub 页面上的 **"Use this template"** 按钮，即可基于此模板创建你自己的项目。
+
 ### 环境要求
 
 - **Unity 6000.3.10f1**（建议用 Unity Hub 安装对应版本）
@@ -39,16 +44,16 @@ Awen 是一款以叙事为核心的独立游戏。工程在框架层做了完整
 ### 克隆
 
 ```bash
-git clone https://github.com/deepmirrorinc/Awen.git
-cd Awen
+git clone https://github.com/WonderDreamF/GamePrototype.git
+cd GamePrototype
 ```
 
 ### 首次打开
 
 1. 用 Unity Hub 添加并以 `6000.3.10f1` 打开本工程。
-2. **生成配置表**：菜单 `Tools/Awen/生成 Luban 配表数据`（或运行 `DataTables/gen.bat`）。
+2. **生成配置表**：菜单 `Tools/GamePrototype/生成 Luban 配表数据`（或运行 `DataTables/gen.bat`）。
    生成代码 → `Assets/_Code/Gen/`,数据 → `Assets/StreamingAssets/Tables/`。
-3. **生成资源地址常量**（一般自动,可手动）：菜单 `Tools/Awen/生成资源地址常量`。
+3. **生成资源地址常量**（一般自动,可手动）：菜单 `Tools/GamePrototype/生成资源地址常量`。
 4. 打开启动场景 `Assets/Scenes/Boot`,点击 ▶ 运行。
 
 > 编辑器下 YooAsset 走 **EditorSimulateMode**（免打包,直接读工程内资源），无需提前构建资源包即可调试。
@@ -68,7 +73,7 @@ cd Awen
 | **配置表** | `ConfigManager.Tables` | Luban 生成的强类型表,运行时读 `StreamingAssets/Tables` |
 | **本地化** | `LocalizationManager` + `LocalizedTMP` | 中/英/日,切换即时刷新 |
 | **音频** | `AudioManager.Instance.Play(AudioId.Xxx)` | AudioMixer 控音量,配置表驱动,BGM 交叉淡入淡出 |
-| **存档** | `SaveManager`（独立程序集 `Awen.SaveSystem`） | 3 槽位 + 自动存档,Newtonsoft JSON,可单测 |
+| **存档** | `SaveManager`（独立程序集 `GamePrototype.SaveSystem`） | 3 槽位 + 自动存档,Newtonsoft JSON,可单测 |
 
 性能约定（详见 [`CLAUDE.md`](./CLAUDE.md)）：**热路径禁止查找**、**异步统一用 UniTask**、**频繁对象走池**、**资源按地址加载不拖 Inspector**。
 
@@ -107,12 +112,12 @@ Tools/                # Luban 可执行与 gen_client.bat
 
 ## 📐 代码规范
 
-所有手写 C# 代码遵循 **[Google C# Style Guide](https://google.github.io/styleguide/csharp-style.html)**（2 空格缩进、K&R 大括号、`Awen.*` 命名空间、显式访问修饰符等）。规范细则见 [`CLAUDE.md`](./CLAUDE.md) 的「C# 代码规范」一节;仓库根目录的 [`.editorconfig`](./.editorconfig) 已据此配置,IDE 会自动格式化与告警。
+所有手写 C# 代码遵循 **[Google C# Style Guide](https://google.github.io/styleguide/csharp-style.html)**（2 空格缩进、K&R 大括号、`GamePrototype.*` 命名空间、显式访问修饰符等）。规范细则见 [`CLAUDE.md`](./CLAUDE.md) 的「C# 代码规范」一节;仓库根目录的 [`.editorconfig`](./.editorconfig) 已据此配置,IDE 会自动格式化与告警。
 
 提交前可校验：
 
 ```bash
-dotnet format Awen.sln --verify-no-changes
+dotnet format GamePrototype.sln --verify-no-changes
 ```
 
 ---
@@ -145,4 +150,3 @@ Unity -projectPath . -buildTarget StandaloneWindows64 -executeMethod BuildPipeli
 ---
 
 <sub>更详尽的工程约定、架构说明与性能规范请阅读 [`CLAUDE.md`](./CLAUDE.md)。</sub>
-# GamePrototype

@@ -3087,7 +3087,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Awen
+  m_text: GamePrototype
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8de0b0b5fcaad1346b48e51b6ee9f451, type: 2}
   m_sharedMaterial: {fileID: 2726491709170167586, guid: 8de0b0b5fcaad1346b48e51b6ee9f451, type: 2}

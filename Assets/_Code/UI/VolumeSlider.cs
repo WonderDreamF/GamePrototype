@@ -1,10 +1,10 @@
-using Awen.Audio;
+﻿using GamePrototype.Audio;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace Awen.UI {
+namespace GamePrototype.UI {
   /// <summary>
   /// 绑定到一个 Slider，控制指定 <see cref="AudioChannel"/> 的音量。
   /// 拖动实时调用 <see cref="AudioManager.SetVolume"/>；面板打开(OnEnable)时用

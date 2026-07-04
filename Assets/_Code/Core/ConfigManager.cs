@@ -1,9 +1,9 @@
-using System.IO;
+﻿using System.IO;
 using cfg;
 using Luban.SimpleJSON;
 using UnityEngine;
 
-namespace Awen.Core {
+namespace GamePrototype.Core {
   /// <summary>
   /// Luban 配置表入口。从 StreamingAssets/Tables 读取 json 构建 <see cref="Tables"/>，
   /// 并初始化 <see cref="LocalizationManager"/>。在 Boot 启动流程中调用一次。

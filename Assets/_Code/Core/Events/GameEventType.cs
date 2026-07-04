@@ -1,4 +1,4 @@
-namespace Awen.Core {
+﻿namespace GamePrototype.Core {
   /// <summary>
   /// 全局事件类型。命名为 GameEventType 而非 EventType，以避免与 UnityEngine.EventType 冲突。
   /// </summary>

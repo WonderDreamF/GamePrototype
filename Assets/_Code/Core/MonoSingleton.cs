@@ -1,6 +1,6 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Awen.Core {
+namespace GamePrototype.Core {
   /// <summary>
   /// MonoBehaviour 单例基类。<b>不使用</b> DontDestroyOnLoad —— 约定把这些管理器
   /// 放在一个不会被卸载的常驻场景里，由场景本身保证其生命周期。

@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Awen.Core {
+namespace GamePrototype.Core {
   public static class EventBus {
     private static readonly Dictionary<GameEventType, List<Delegate>> _handlers = new();
 

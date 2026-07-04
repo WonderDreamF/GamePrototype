@@ -1,11 +1,11 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace Awen.Editor {
+namespace GamePrototype.Editor {
   public static class LubanGenerator {
-    [MenuItem("Tools/Awen/生成 Luban 配表数据")]
+    [MenuItem("Tools/GamePrototype/生成 Luban 配表数据")]
     public static void Generate() {
       var batPath = Path.GetFullPath(
           Path.Combine(Application.dataPath, "..", "Tools", "gen_client.bat"));

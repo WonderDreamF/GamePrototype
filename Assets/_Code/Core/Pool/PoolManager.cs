@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-namespace Awen.Core {
+namespace GamePrototype.Core {
   /// <summary>
   /// 全局对象池管理器。统一管理所有 <see cref="Pool"/>，并维护层级结构：
   /// <code>

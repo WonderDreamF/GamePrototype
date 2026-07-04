@@ -1,6 +1,6 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Awen.Core {
+namespace GamePrototype.Core {
   /// <summary>
   /// 由对象池自动挂到每个池化实例上的标记组件。
   /// 持有一个指向所属 <see cref="Pool"/> 的回引，使归还可以 O(1) 完成，

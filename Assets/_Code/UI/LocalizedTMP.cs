@@ -1,8 +1,8 @@
-using Awen.Core;
+﻿using GamePrototype.Core;
 using TMPro;
 using UnityEngine;
 
-namespace Awen.UI {
+namespace GamePrototype.UI {
   [RequireComponent(typeof(TMP_Text))]
   public class LocalizedTMP : MonoBehaviour {
     [SerializeField]

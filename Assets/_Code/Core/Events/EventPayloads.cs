@@ -1,4 +1,4 @@
-namespace Awen.Core {
+﻿namespace GamePrototype.Core {
   public struct SceneLoadedData {
     public string SceneName;
   }
